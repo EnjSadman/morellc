@@ -1,0 +1,64 @@
+@use "../styles/vars/vars.scss" as vars;
+
+.timer {
+  min-height: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  row-gap: 16px;
+
+
+  &__text {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 5;
+  }
+
+  &__clock {
+    grid-column: 7 / 9;
+  
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 4px 6px;
+  
+    border-radius: 4px;
+  
+    background-color: vars.$button-disabled;
+  }
+
+  &__progressbar {
+    grid-column: 1 / 9;
+  
+    position: relative;
+  
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  
+    background-color: vars.$bg-color-body;
+  
+    height: 1px;
+  
+    border-radius: 100px;
+  }
+
+  &__progressbar--bar {
+    width: 100%;
+    height: 3px;
+    border-radius: 100px;
+    
+    background-color: vars.$bg-color-dark-green;
+  }
+
+  &__pay--button {
+    grid-column: 1 / 9;
+  }
+}
+
+.low-on-time {
+  background-color: vars.$primary-red;
+}
+

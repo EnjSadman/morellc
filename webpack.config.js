@@ -13,11 +13,16 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.html$/,          
+        use: ['html-loader'],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/index.html',  
+      inject: 'body',                
     }),
   ],
   devServer: {

@@ -1,7 +1,54 @@
-@import "../styles/mixins/resolution.scss";
-@import "../styles/vars/vars.scss";
+@use "../styles/mixins/resolution.scss";
+@use "../styles/vars/vars.scss" as vars;
+@use "../styles/reservation.scss";
+@use "../styles/passengers.scss";
+@use "../styles/timer.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Montserrat", sans-serif;
+  
+  background-color: vars.$bg-color-body;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-full-width {
+  width: 100%;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  min-height: 32px;
+
+  &-green {
+    color: vars.$color-black;
+    border-radius: 4px;
+    background-color: vars.$button-primary;
+
+    &:hover {
+      background-color: vars.$button-hover;
+    }
+
+    &:active {
+      background-color: vars.$button-active;
+    }
+
+    &:disabled {
+      color: vars.$color-gray;
+      background-color: vars.$button-disabled;
+    }
+  }
+}
 
 
 

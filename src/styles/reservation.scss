@@ -1,0 +1,15 @@
+@use "../styles/vars/vars.scss" as vars;
+
+.reservation {
+  background-color: vars.$bg-color-white;
+
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+  min-height: 40px;
+
+  &__container {
+    padding: 24px;
+  }
+}
